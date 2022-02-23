@@ -1,0 +1,29 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type PostEntity {
+  id: Int!
+  title: String!
+  content: String!
+}
+
+type Query {
+  getAllPosts: [PostEntity!]!
+}
+
+type Mutation {
+  createBlog(post: CreateBlogDto!): PostEntity!
+  updateBlog(id: Float!, post: UpdateBlogDto!): PostEntity!
+  deleteBlog(id: Float!): PostEntity!
+}
+
+input CreateBlogDto {
+  title: String!
+  content: String!
+}
+
+input UpdateBlogDto {
+  title: String
+  content: String
+}
